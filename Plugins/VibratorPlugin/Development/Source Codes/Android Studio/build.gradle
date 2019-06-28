@@ -1,0 +1,7 @@
+task CreatePlugin(type: Copy) {
+	dependsOn assemble
+	from('build/outputs/aar')
+	into('build/outputs/aar')
+	include(project.name+'-release.aar')
+	rename(project.name+'-release.aar', 'VibratorPlugin.aar')
+}
